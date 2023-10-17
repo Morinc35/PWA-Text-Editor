@@ -26,6 +26,7 @@ module.exports = () => {
       }),
       new WebpackPwaManifest({
         name: "Jate",
+        fingerprints: false,
         inject: true,
         short_name: "J.A.T.E",
         description: "An easy to use text editor!",
@@ -37,12 +38,10 @@ module.exports = () => {
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join("assets", "logo"),
+            destination: path.join("assets", "icons"),
           },
         ],
-
       }),
-      
     ],
 
     module: {
